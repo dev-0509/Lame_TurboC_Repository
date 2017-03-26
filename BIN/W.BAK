@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int num;
+  char *p;
+  clrscr();
+  scanf("%d",&num);
+  p=(char *)&num;
+  printf("%d",*p);
+  /*if(*p==0||*p==2||*p==4||*p==6||*p==8)
+    printf("Even");
+  else
+    printf("Odd");*/
+  getch();
+}

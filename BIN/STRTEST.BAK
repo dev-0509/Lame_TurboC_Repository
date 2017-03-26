@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void disp(struct sample);
+void main()
+{
+  struct sample
+  {
+    int age;
+    char name[25];
+    float sal;
+  }s;
+  printf("\n\tEnter the age : ");
+  scanf("%d",&s.age);
+  printf("\n\tEnter the name : ");
+  scanf("%s",&s.name);
+  printf("\n\tEnter the salary : ");
+  scanf("%f",&s.sal);
+  disp(s);
+  getch();
+}
+void disp(struct sample s)
+{
+  printf("\n\tAge : %d",s.age);
+  printf("\n\tName : %s",s.name);
+  printf("\n\tSalary : %f",s.sal);
+}
+
+

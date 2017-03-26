@@ -1,0 +1,47 @@
+	      //---- BINARY SEARCH CODE FOR SORTED ARRAY //----
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a[10],i,j,n,mid,s;
+  clrscr();
+  printf("\n\tEnter the number of elements in the array : ");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+    printf("\n\t\tEnter element %d : ",i+1);
+    scanf("%d",&a[i]);
+  }
+  printf("\n\tThe array is : \n\n");
+  for(i=0;i<n;i++)
+  {
+    printf("\t %d",a[i]);
+  }
+  printf("\n\tEnter the element to be searched : ");
+  scanf("%d",&s);
+  i=0;
+  j=n;
+  mid=(i+j)/2;
+  while(s!=a[mid]&&i<j)
+  {
+    mid=(i+j)/2;
+    if(s<a[mid])
+    {
+      j=mid-1;
+    }
+    else
+    i=mid+1;
+  }
+  if(s==a[mid])
+  {
+    printf("\n\t\tElement found at position %d !",mid+1);
+  }
+  getch();
+}
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int i=0,j=0,temp1=0,temp2=0,c;
+  char str[25];
+  clrscr();
+  printf("\n\tEnter the string : ");
+  gets(str);
+  printf("\n\t\tThe string is : ");
+  puts(str);
+  for(str[i]='97';str[i]<='122';i++)
+  {
+    while(str[i]!=str[j])
+    {
+      temp1++;
+      if(str[j]=='a'||str[j]=='e'||str[j]=='i'||str[j]=='o'||str[j]=='u')
+      {
+	temp2++;
+      }
+      j++;
+    }
+  }
+  c=temp1-temp2;
+  printf("\n\tNumber of consonants : %d",c);
+  getch();
+}

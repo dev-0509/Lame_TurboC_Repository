@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int arr[6][6];
+    int d,e,p,max,m,temp1=0,temp2=0,l=0,i,j,k,n,q=0,sum[20];
+    for(d=0;d<6;d++)
+    {
+      for(e=0;e<6;e++)
+      {
+	scanf("%d",&arr[d][e]);
+      }
+      printf("\n");
+    }
+    for(n=0;n<6;n++)
+    {
+    for(i=0;i<3;i++)
+    {
+	for(j=n;j<3+n;j++)
+	{
+	    if(temp1==1)
+	    {
+		temp1=0;
+		for(k=i;k<3+q;k++)
+		{
+		    if(temp2==1)
+		    {
+			temp2=0;
+			sum[l]+=arr[j][k];
+		    }
+		    else
+		    {
+			temp2=1;
+			continue;
+		    }
+		}
+	    }
+	    else
+	    {
+		temp1=1;
+		for(k=i;k<3+q;k++)
+		{
+		    sum[l]+=arr[j][k];
+		}
+	    }
+	}
+	temp1=temp2=0;
+	l++;
+	q++;
+    }
+    q=0;
+    }
+    for(p=0;p<16;p++)
+	printf("\n%d",sum[p]);
+    max=sum[0];
+    for(m=0;m<16;m++)
+    {
+	if(max<sum[m])
+	    max=sum[m];
+    }
+    printf("\n%d",max);
+    getch();
+}

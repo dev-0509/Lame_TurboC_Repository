@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+class abc
+{
+  public:
+	int a:4;
+	int b:6;
+};
+void main()
+{
+  abc a1;
+  clrscr();
+  cout<<sizeof(a1.a);
+  getch();
+}

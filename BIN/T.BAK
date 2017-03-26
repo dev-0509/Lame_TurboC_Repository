@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  FILE *p;
+  char *c;
+  clrscr();
+  p=fopen("ad.txt","r");
+  fseek(p,46L,SEEK_SET);
+  printf("%c",fgetc(p));
+  /*while((c=fgetc(p))!=EOF)
+  {
+    if(c=='\n')
+      printf("\n");
+    printf("%c",c);
+  }*/
+  getch();
+}

@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+class stud
+{
+  int roll,age;
+  public:
+	stud(){roll=0;age=0;}
+	stud(int p,int s)
+	{
+	  roll=p;
+          age=s;
+	}
+	stud(int t)
+	{
+	  roll=age=t;
+	}
+	void disp()
+	{
+	  cout<<"\n\nRoll ="<<roll<<endl<<"Age ="<<age;
+	}
+	void get();
+};
+void stud::get()
+{
+  cout<<"\nEnter roll number and age : ";
+  cin>>roll>>age;
+}
+void main()
+{
+  clrscr();
+  stud s1,s2;
+  s1.disp();
+  s2.disp();
+  stud s3(5,6);
+  s3.disp();
+  stud s4(10);
+  s4.disp();
+  getch();
+}

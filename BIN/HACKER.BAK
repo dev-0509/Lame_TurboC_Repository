@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+int main()
+{
+	int i, j, temp, range, max;
+	double fan_quot[1000];
+	char name[1000][20], copy[20];
+
+	clrscr();
+
+	scanf("%d", &range);
+	scanf("%d", &max);
+
+	for(i=0; i<range; i++)
+	{
+		scanf("%s", name[i]);
+		scanf("%lf", &fan_quot[i]);
+	}
+
+	for(i=0; i<range; i++)
+	{
+	    for(j=0; j<range-i; j++)
+	    {
+			if(fan_quot[j]<fan_quot[j+1])
+			{
+			    temp = fan_quot[j];
+			    strcpy(copy,name[j]);
+			    fan_quot[j] = fan_quot[j+1];
+			    strcpy(name[j],name[j+1]);
+			    fan_quot[j+1] = temp;
+			    strcpy(name[j+1],copy);
+			}
+	    }
+	}
+
+    for(i=0; i<max; i++)
+    {
+	for(j=0; j<max-i; j++)
+	    {
+	    	if(fan_quot[j]==fan_quot[j+1])
+	    	{
+				if(strcmp(name[j],name[j+1]) > 0)
+				{
+					strcpy(copy,name[j]);					
+					strcpy(name[j],name[j+1]);					
+					strcpy(name[j+1],copy);					
+				}
+			}
+	    }
+    }
+
+    for(i=0; i<max; i++)
+    {
+		printf("%s\n", name[i]);
+		printf("%.0lf\n", fan_quot[i]);
+    }
+
+    getch();
+    return 0;
+}

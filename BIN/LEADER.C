@@ -1,0 +1,102 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+  int T,i,j=0,l,count=0,count_a1=0,count_a2=0;
+  char a[20],b[20],c[20];
+  clrscr();
+  scanf("%d",&T);
+  switch(T)
+  {
+    case 1:scanf("%s",a);
+	   l1=strlen(a);
+	   gets(b);
+	   l2=strlen(b);
+	   gets(c);
+	   l3=stelen(c);
+	   for(i=0;a[i]!='\0';i++)
+	   {
+	     while(a[i]!=a[j]||i==j)
+	     {
+	       if(i==j)
+	       {
+		 j++;
+		 continue;
+	       }
+	       if(a[j]=='\0')
+		 break;
+	       j++;
+	       count++;
+	     }
+	     if(count==l1-1)
+	       count_a2++;
+	     else
+	       count_a1++;
+	     j=0;
+	     count=0;
+	   }
+	   if(l1==7)
+	     count_a2+=(count_a1-2);
+	   else
+	     count_a2++;
+	   printf("%d",count_a2);
+	   i=j=count=count_a1=count_a2=0;
+	   for(i=0;b[i]!='\0';i++)
+	   {
+	     while(b[i]!=b[j]||i==j)
+	     {
+	       if(i==j)
+	       {
+		 j++;
+		 continue;
+	       }
+	       if(b[j]=='\0')
+		 break;
+	       j++;
+	       count++;
+	     }
+	     if(count==l2-1)
+	       count_a2++;
+	     else
+	       count_a1++;
+	     j=0;
+	     count=0;
+	   }
+	   if(l2==7)
+	     count_a2+=(count_a1-2);
+	   else
+	     count_a2++;
+	   printf("%d",count_a2);
+	   i=j=count=count_a1=count_a2=0;
+	   for(i=0;c[i]!='\0';i++)
+	   {
+	     while(c[i]!=c[j]||i==j)
+	     {
+	       if(i==j)
+	       {
+		 j++;
+		 continue;
+	       }
+	       if(c[j]=='\0')
+		 break;
+	       j++;
+	       count++;
+	     }          3
+	     if(count==l-1)
+	       count_a2++;
+	     else
+	       count_a1++;
+	     j=0;
+	     count=0;
+	   }
+	   if(l3==7)
+	     count_a2+=(count_a1-2);
+	   else
+	     count_a2++;
+	   printf("%d",count_a2);
+  }
+  getch();
+}
+
+

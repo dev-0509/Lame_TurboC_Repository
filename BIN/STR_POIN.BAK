@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int len;
+  char *s,*str;
+  clrscr();
+  printf("\n\tEnter the string : ");
+  fgets(s,30,stdin);
+  len=strlen(str);
+  str=(char *)malloc(len);
+  strcpy(str,s);
+  puts(str);
+  getch();
+}

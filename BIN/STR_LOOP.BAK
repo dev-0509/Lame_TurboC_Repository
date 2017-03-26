@@ -1,0 +1,83 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int ch,len=0,i=0,chk=1;
+  char temp,str[25];
+  clrscr();
+  printf("\n\t\t1. String Reversal :- While Loop");
+  printf("\n\t\t2. String Reversal :- For Loop");
+  printf("\n\t\t3. String Reversal :- Do-While Loop");
+  printf("\n\t\t4. Exit");
+  printf("\n\n\t\t\tEnter your choice (1-4) : ");
+  scanf("%d",&ch);
+  printf("\n\t\tEnter the string : ");
+  fflush(stdin);
+  gets(str);
+  switch(ch)
+  {
+    case 1: while(str[len]!='\0')
+	      len++;
+	    len--;
+	    while(i<=len)
+	    {
+	      temp=str[i];
+	      str[i]=str[len];
+	      str[len]=temp;
+
+	      i++;
+	      len--;
+	    }
+	    break;
+    case 2: for(;str[len]!='\0';len++);
+	    len--;
+	    for(;i<=len;i++,len--)
+	    {
+	      temp=str[i];
+	      str[i]=str[len];
+	      str[len]=temp;
+	    }
+	    break;
+    case 3: do
+	    {
+	      if(chk==1)
+	      {
+		if(str[len]!='\0')
+		  len++;
+		chk=0;
+	      }
+	      else
+		len++;
+	    }while(str[len]!='\0');
+	    chk=1;
+	    do
+	    {
+	      if(chk==1)
+	      {
+		len--;
+		if(i<=len)
+		{
+		  temp=str[i];
+		  str[i]=str[len];
+		  str[len]=temp;
+
+		  i++;
+		  len--;
+		  chk=0;
+		}
+	      }
+	      else
+	      {
+		temp=str[i];
+		str[i]=str[len];
+		str[len]=temp;
+
+		i++;
+		len--;
+	      }
+	    }while(i<=len);
+	    puts(str);
+	    break;
+  }
+  getch();
+}

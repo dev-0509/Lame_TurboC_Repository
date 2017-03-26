@@ -1,0 +1,39 @@
+#include<iostream.h>
+#include<conio.h>
+class calc
+{
+  int a,b,sum;
+  public:
+	void enter()
+	{
+	  cout<<"\n\tEnter the first number : ";
+	  cin>>a;
+	  cout<<"\n\tEnter the second number : ";
+	  cin>>b;
+	}
+	void add()
+	{
+	  sum=a+b;
+	}
+	void disp()
+	{
+	  cout<<sum;
+	}
+};
+void main()
+{
+  clrscr();
+  calc c[2];
+  for(int i=0;i<2;i++)
+  {
+    cout<<"\n\tEnter the
+  c1.enter();
+  c2.enter();
+  c1.add();
+  c2.add();
+  c1.disp();
+  c2.disp();
+  getch();
+}
+
+

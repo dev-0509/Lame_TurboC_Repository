@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a[10],b=0,i,j,temp=0,n,k=0,c[10],e;
+  clrscr();
+  printf("\n\tEnter the total number of elements : ");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+    printf("\n\t\tEnter element %d : ",i+1);
+    scanf("%d",&a[i]);
+  }
+  printf("\n\tThe array is : ");
+  for(i=0;i<n;i++)
+  {
+    printf("\t%d",a[i]);
+  }
+  for(i=0;i<n;i++)
+  {
+    for(j=0;j<n;j++)
+    {
+      if(a[i]==a[j])
+      {
+	b++;
+      }
+      if(b==2)
+      {
+	c[k]=a[i];
+	printf("\n\tElement %d : %d",i+1,c[k]);
+	k++;
+	break;
+      }
+    }
+  }
+  e=k;
+  k=0;
+  for(i=0;i<n;i++)
+  {
+    while(k<=e)
+    {
+    for(j=0;j<n;j++)
+    {
+      if(c[k]==a[j])
+      {
+	temp++;
+      }
+    }
+    printf("\n\n\t\t%d is %d times in the array ",c[k],temp);
+    temp=0;
+    k++;
+    }
+  }
+  getch();
+}

@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int i=0,temp=0;
+  char str[25];
+  clrscr();
+  printf("\n\tEnter the string : ");
+  gets(str);
+  printf("\n\t\tThe string is : ");
+  puts(str);
+  while(str[i]!='\0')
+  {
+    if(str[i]!=' ')
+    {
+      temp++;
+    }
+    i++;
+  }
+  printf("\n\tLength of the string without spaces : %d",temp);
+  getch();
+}

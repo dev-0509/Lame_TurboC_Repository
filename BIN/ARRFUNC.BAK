@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+void input(int *,int);
+void disp(int *,int);
+void main()
+{
+  int a[10],n;
+  clrscr();
+  printf("\n\tEnter the number of elements : ");
+  scanf("%d",&n);
+  printf("\n\tEnter the array => \n\n");
+  input(&a[0],n);
+  printf("\n\tThe array is : \n\n");
+  disp(&a[0],n);
+  getch();
+}
+void input(int *x,int y)
+{
+  int i;
+  for(i=0;i<y;i++)
+  {
+    printf("\n\t\tEnter element %d : ",i+1);
+    scanf("%d",(x+i));
+  }
+}
+void disp(int *p,int q)
+{
+  int i;
+  for(i=0;i<q;i++)
+  printf("\t %d",(p+i));
+}
+
+
+
